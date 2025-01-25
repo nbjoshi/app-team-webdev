@@ -1,10 +1,8 @@
 .main-body {
   display: flex;
-  gap: 16px;
-  padding: 32px;
-  margin: auto;
-  padding: 0 86px;
-  border: 5px solid red;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 86px;
 }
 
 .sort {
@@ -13,11 +11,46 @@
   align-self: flex-end;
 }
 
-.search {
+.right-side {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+}
+
+.search {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   border: 1px solid black;
-  width: 160px;
   height: 37px;
+}
+
+.search p {
+  font-size: 13px;
+  line-height: 26px;
+  letter-spacing: -0.3px;
+}
+
+.chevron {
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+}
+
+.item-number {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.4px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
