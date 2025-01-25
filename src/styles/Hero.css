@@ -1,0 +1,25 @@
+.hero {
+  width: auto;
+  height: 184px;
+  background-color: var(--light-green);
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 4rem;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 400;
+}
+
+.divider p {
+  font-size: 22px;
+}
