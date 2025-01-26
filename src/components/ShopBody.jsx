@@ -2,76 +2,12 @@ import "../styles/ShopBody.css";
 import FilterComponent from "./FilterComponent";
 import PlantCard from "./PlantCard";
 import Cart from "./Cart";
-import { useState } from "react";
-
-const plantsData = [
-  {
-    id: 1,
-    img_url:
-      "https://s3-alpha-sig.figma.com/img/7f2f/202e/8727d5c56cfb3c198d22126a4beff904?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ifpNWSzVN1CWEKZLHC-BBJl8YfKYtCXDoyyQ0g6eARjYVxDGmKLBaJLr-~7oAwpMSCLOyvrrbEtNFmEUK~qTtqGhz0MGDZx-K-u0t6vih4P6y2jgLNLsjzp1YQ6klfe7Jb9LoXXvlKMmsM-jElxCG97zwenxKOMhfMQg5AgkkOkL06QzspAWGkDpddVDKkWsdfSe2TUuxQpGsdY8oYMcmteekheNfZh4quRqpizFTbiBUWdMGdpEo5XgUv3TAlXMnXssThwUwQrbyIjEFkqiJf28aV-Jmzir5oWXSu7cNViq3ogMQp2d~iuc6qz23gzyvOlX80XyxTvcJWOSWajxOQ__",
-    name: "Snake Plant",
-    price: 350,
-  },
-  {
-    id: 2,
-    img_url:
-      "https://s3-alpha-sig.figma.com/img/7f2f/202e/8727d5c56cfb3c198d22126a4beff904?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ifpNWSzVN1CWEKZLHC-BBJl8YfKYtCXDoyyQ0g6eARjYVxDGmKLBaJLr-~7oAwpMSCLOyvrrbEtNFmEUK~qTtqGhz0MGDZx-K-u0t6vih4P6y2jgLNLsjzp1YQ6klfe7Jb9LoXXvlKMmsM-jElxCG97zwenxKOMhfMQg5AgkkOkL06QzspAWGkDpddVDKkWsdfSe2TUuxQpGsdY8oYMcmteekheNfZh4quRqpizFTbiBUWdMGdpEo5XgUv3TAlXMnXssThwUwQrbyIjEFkqiJf28aV-Jmzir5oWXSu7cNViq3ogMQp2d~iuc6qz23gzyvOlX80XyxTvcJWOSWajxOQ__",
-    name: "Spider Plant",
-    price: 200,
-  },
-  {
-    id: 3,
-    img_url:
-      "https://s3-alpha-sig.figma.com/img/7f2f/202e/8727d5c56cfb3c198d22126a4beff904?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ifpNWSzVN1CWEKZLHC-BBJl8YfKYtCXDoyyQ0g6eARjYVxDGmKLBaJLr-~7oAwpMSCLOyvrrbEtNFmEUK~qTtqGhz0MGDZx-K-u0t6vih4P6y2jgLNLsjzp1YQ6klfe7Jb9LoXXvlKMmsM-jElxCG97zwenxKOMhfMQg5AgkkOkL06QzspAWGkDpddVDKkWsdfSe2TUuxQpGsdY8oYMcmteekheNfZh4quRqpizFTbiBUWdMGdpEo5XgUv3TAlXMnXssThwUwQrbyIjEFkqiJf28aV-Jmzir5oWXSu7cNViq3ogMQp2d~iuc6qz23gzyvOlX80XyxTvcJWOSWajxOQ__",
-    name: "Snake Plant",
-    price: 350,
-  },
-  {
-    id: 4,
-    img_url:
-      "https://s3-alpha-sig.figma.com/img/7f2f/202e/8727d5c56cfb3c198d22126a4beff904?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ifpNWSzVN1CWEKZLHC-BBJl8YfKYtCXDoyyQ0g6eARjYVxDGmKLBaJLr-~7oAwpMSCLOyvrrbEtNFmEUK~qTtqGhz0MGDZx-K-u0t6vih4P6y2jgLNLsjzp1YQ6klfe7Jb9LoXXvlKMmsM-jElxCG97zwenxKOMhfMQg5AgkkOkL06QzspAWGkDpddVDKkWsdfSe2TUuxQpGsdY8oYMcmteekheNfZh4quRqpizFTbiBUWdMGdpEo5XgUv3TAlXMnXssThwUwQrbyIjEFkqiJf28aV-Jmzir5oWXSu7cNViq3ogMQp2d~iuc6qz23gzyvOlX80XyxTvcJWOSWajxOQ__",
-    name: "Snake Plant",
-    price: 350,
-  },
-  {
-    id: 5,
-    img_url:
-      "https://s3-alpha-sig.figma.com/img/7f2f/202e/8727d5c56cfb3c198d22126a4beff904?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ifpNWSzVN1CWEKZLHC-BBJl8YfKYtCXDoyyQ0g6eARjYVxDGmKLBaJLr-~7oAwpMSCLOyvrrbEtNFmEUK~qTtqGhz0MGDZx-K-u0t6vih4P6y2jgLNLsjzp1YQ6klfe7Jb9LoXXvlKMmsM-jElxCG97zwenxKOMhfMQg5AgkkOkL06QzspAWGkDpddVDKkWsdfSe2TUuxQpGsdY8oYMcmteekheNfZh4quRqpizFTbiBUWdMGdpEo5XgUv3TAlXMnXssThwUwQrbyIjEFkqiJf28aV-Jmzir5oWXSu7cNViq3ogMQp2d~iuc6qz23gzyvOlX80XyxTvcJWOSWajxOQ__",
-    name: "Snake Plant",
-    price: 350,
-  },
-  {
-    id: 6,
-    img_url:
-      "https://s3-alpha-sig.figma.com/img/7f2f/202e/8727d5c56cfb3c198d22126a4beff904?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ifpNWSzVN1CWEKZLHC-BBJl8YfKYtCXDoyyQ0g6eARjYVxDGmKLBaJLr-~7oAwpMSCLOyvrrbEtNFmEUK~qTtqGhz0MGDZx-K-u0t6vih4P6y2jgLNLsjzp1YQ6klfe7Jb9LoXXvlKMmsM-jElxCG97zwenxKOMhfMQg5AgkkOkL06QzspAWGkDpddVDKkWsdfSe2TUuxQpGsdY8oYMcmteekheNfZh4quRqpizFTbiBUWdMGdpEo5XgUv3TAlXMnXssThwUwQrbyIjEFkqiJf28aV-Jmzir5oWXSu7cNViq3ogMQp2d~iuc6qz23gzyvOlX80XyxTvcJWOSWajxOQ__",
-    name: "Snake Plant",
-    price: 350,
-  },
-  {
-    id: 7,
-    img_url:
-      "https://s3-alpha-sig.figma.com/img/7f2f/202e/8727d5c56cfb3c198d22126a4beff904?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ifpNWSzVN1CWEKZLHC-BBJl8YfKYtCXDoyyQ0g6eARjYVxDGmKLBaJLr-~7oAwpMSCLOyvrrbEtNFmEUK~qTtqGhz0MGDZx-K-u0t6vih4P6y2jgLNLsjzp1YQ6klfe7Jb9LoXXvlKMmsM-jElxCG97zwenxKOMhfMQg5AgkkOkL06QzspAWGkDpddVDKkWsdfSe2TUuxQpGsdY8oYMcmteekheNfZh4quRqpizFTbiBUWdMGdpEo5XgUv3TAlXMnXssThwUwQrbyIjEFkqiJf28aV-Jmzir5oWXSu7cNViq3ogMQp2d~iuc6qz23gzyvOlX80XyxTvcJWOSWajxOQ__",
-    name: "Snake Plant",
-    price: 350,
-  },
-  {
-    id: 8,
-    img_url:
-      "https://s3-alpha-sig.figma.com/img/7f2f/202e/8727d5c56cfb3c198d22126a4beff904?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ifpNWSzVN1CWEKZLHC-BBJl8YfKYtCXDoyyQ0g6eARjYVxDGmKLBaJLr-~7oAwpMSCLOyvrrbEtNFmEUK~qTtqGhz0MGDZx-K-u0t6vih4P6y2jgLNLsjzp1YQ6klfe7Jb9LoXXvlKMmsM-jElxCG97zwenxKOMhfMQg5AgkkOkL06QzspAWGkDpddVDKkWsdfSe2TUuxQpGsdY8oYMcmteekheNfZh4quRqpizFTbiBUWdMGdpEo5XgUv3TAlXMnXssThwUwQrbyIjEFkqiJf28aV-Jmzir5oWXSu7cNViq3ogMQp2d~iuc6qz23gzyvOlX80XyxTvcJWOSWajxOQ__",
-    name: "Snake Plant",
-    price: 350,
-  },
-  {
-    id: 9,
-    img_url:
-      "https://s3-alpha-sig.figma.com/img/7f2f/202e/8727d5c56cfb3c198d22126a4beff904?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ifpNWSzVN1CWEKZLHC-BBJl8YfKYtCXDoyyQ0g6eARjYVxDGmKLBaJLr-~7oAwpMSCLOyvrrbEtNFmEUK~qTtqGhz0MGDZx-K-u0t6vih4P6y2jgLNLsjzp1YQ6klfe7Jb9LoXXvlKMmsM-jElxCG97zwenxKOMhfMQg5AgkkOkL06QzspAWGkDpddVDKkWsdfSe2TUuxQpGsdY8oYMcmteekheNfZh4quRqpizFTbiBUWdMGdpEo5XgUv3TAlXMnXssThwUwQrbyIjEFkqiJf28aV-Jmzir5oWXSu7cNViq3ogMQp2d~iuc6qz23gzyvOlX80XyxTvcJWOSWajxOQ__",
-    name: "Snake Plant",
-    price: 350,
-  },
-];
+import { useState, useContext } from "react";
+import { PlantContext } from "../context/PlantContext";
 
 export default function ShopBody() {
   const [isCartVisible, setCartVisible] = useState(false);
+  const { plantsData } = useContext(PlantContext);
 
   const handleShowCart = () => {
     setCartVisible(true);

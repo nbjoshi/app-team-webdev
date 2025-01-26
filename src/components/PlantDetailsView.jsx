@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/PlantDetailsView.css";
 
-export default function PlantDetailsView() {
+export default function PlantDetailsView({ plant }) {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [selectedDetail, setSelectedDetail] = useState("Watering");
 

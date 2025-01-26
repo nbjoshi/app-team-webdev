@@ -9,6 +9,7 @@
   padding: 2rem 2rem;
   font-family: "Open Sans", sans-serif;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .plant-card-image-wrapper {
