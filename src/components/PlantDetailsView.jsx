@@ -16,11 +16,7 @@ export default function PlantDetailsView({ plant }) {
       case "Watering":
         return {
           header: "Watering",
-          content: `Marble queen pothos is a relatively drought-tolerant plant, so it is important to avoid overwatering. If you overwater your plant, the leaves will start to yellow and fall off. If you underwater your plant, the leaves will start to wilt.
-
-The best way to determine when to water your marble queen pothos is to stick your finger into the soil. If the top inch of soil is dry, it is time to water your plant.
-
-When you water your marble queen pothos, water deeply until the water runs out of the drainage holes. This will ensure that the roots are getting enough water.`,
+          content: `Marble queen pothos is a relatively drought-tolerant plant, so it is important to avoid overwatering. If you overwater your plant, the leaves will start to yellow and fall off. If you underwater your plant, the leaves will start to wilt. The best way to determine when to water your marble queen pothos is to stick your finger into the soil. If the top inch of soil is dry, it is time to water your plant. When you water your marble queen pothos, water deeply until the water runs out of the drainage holes. This will ensure that the roots are getting enough water.`,
         };
       case "Sunlight":
         return {

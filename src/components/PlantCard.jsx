@@ -1,6 +1,6 @@
 import "../styles/PlantCard.css";
 import { useCart } from "../context/CartContext";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { PlantContext } from "../context/PlantContext";
 import { useNavigate } from "react-router-dom";
 
