@@ -31,7 +31,9 @@ export default function Footer() {
         </ul>
       </div>
       <div className="footer-copyright">
-        <p>COPYRIGHT GREEN THUMB. ALL RIGHTS RESERVED</p>
+        <p>
+          COPYRIGHT GREEN THUMB. ALL RIGHTS <br></br>RESERVED
+        </p>
       </div>
     </div>
   );
