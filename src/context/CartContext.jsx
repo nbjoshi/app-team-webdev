@@ -11,12 +11,12 @@ export const CartProvider = ({ children }) => {
       setCartItems(
         cartItems.map((cartItem) =>
           cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            ? { ...cartItem, quantity: item.quantity }
             : cartItem
         )
       );
     } else {
-      setCartItems([...cartItems, { ...item, quantity: 1 }]);
+      setCartItems([...cartItems, item]);
     }
   };
 
@@ -25,6 +25,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const updateQuantity = (id, quantity) => {
+    if (quantity < 1) return;
     setCartItems(
       cartItems.map((cartItem) =>
         cartItem.id === id ? { ...cartItem, quantity } : cartItem
