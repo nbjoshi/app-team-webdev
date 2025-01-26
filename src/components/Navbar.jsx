@@ -1,4 +1,5 @@
 import "../styles/Navbar.css";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Cart from "./Cart";
 import { useCart } from "../context/CartContext";
@@ -28,9 +29,9 @@ export default function Navbar() {
         </div>
       </header>
       <div className="navbar-header">
-        <p className="navbar-logo-text">
+        <NavLink to="/" className="navbar-logo-text">
           Green <span className="navbar-logo-highlight">Thumb</span>
-        </p>
+        </NavLink>
         <ul className="navbar-tabs">
           <li className="navbar-tab-item">Home</li>
           <li className="navbar-tab-item">Products</li>

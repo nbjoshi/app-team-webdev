@@ -1,0 +1,67 @@
+.plant-details-container {
+  display: flex;
+  height: 420px;
+  background-color: var(--light-green);
+}
+
+.padding {
+  width: 5%;
+}
+
+.rectangle-3850 {
+  width: 20%;
+  padding: 20px;
+}
+
+.dropdown-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chevron {
+  font-size: 16px;
+}
+
+.dropdown {
+  margin-top: 10px;
+  margin-left: 4rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dropdown p {
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.dropdown p:hover {
+  color: #38761d;
+}
+
+.care {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 0 2rem;
+}
+
+.care-details h1 {
+  font-size: 32px;
+}
+
+.care-details p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.care-divider {
+  width: 2px;
+  height: 100%;
+  background-color: var(--dark-green);
+}

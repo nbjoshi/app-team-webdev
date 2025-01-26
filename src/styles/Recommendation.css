@@ -1,0 +1,23 @@
+.recommendation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem;
+}
+
+.recommendation-header {
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+
+.recommendation-header span {
+  color: var(--dark-green);
+}
+
+.recommendation-grid {
+  display: grid;
+  margin-top: 2rem;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}

@@ -27,6 +27,8 @@
 
 .navbar-logo-text {
   width: 195px;
+  text-decoration: none;
+  cursor: pointer;
   height: 37px;
   font-size: 26px;
   line-height: 39px;
