@@ -44,7 +44,7 @@ export default function ShopBody() {
           <FilterComponent name="Include" />
         </div>
         <div className="shop-plant-grid">
-          {plantsData.map((plant) => (
+          {plantsData.slice(0, 9).map((plant) => (
             <PlantCard
               key={plant.id}
               id={plant.id}

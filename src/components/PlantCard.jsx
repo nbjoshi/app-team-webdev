@@ -17,6 +17,7 @@ export default function PlantCard({ id, img_url, name, price, onBuy }) {
 
   const handleNavigate = () => {
     navigate(`/plant/${id}`);
+    window.scrollTo(0, 0);
   };
 
   return (
