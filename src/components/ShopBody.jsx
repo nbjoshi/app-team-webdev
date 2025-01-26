@@ -34,7 +34,7 @@ export default function ShopBody() {
           </div>
         </div>
         <div className="shop-product-count">
-          <p>Showing {plantsData.length} products</p>
+          <p>Showing {9} products</p>
         </div>
       </div>
       <div className="shop-content">

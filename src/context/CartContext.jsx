@@ -11,12 +11,12 @@ export const CartProvider = ({ children }) => {
       setCartItems(
         cartItems.map((cartItem) =>
           cartItem.id === item.id
-            ? { ...cartItem, quantity: item.quantity }
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
             : cartItem
         )
       );
     } else {
-      setCartItems([...cartItems, item]);
+      setCartItems([...cartItems, { ...item, quantity: 1 }]);
     }
   };
 
