@@ -17,7 +17,7 @@ export default function Footer() {
             <img src="https://static.vecteezy.com/system/resources/previews/042/127/152/non_2x/black-youtube-logo-on-transparent-background-icon-free-png.png" />
           </li>
           <li className="footer-icon-item">
-            <img src="https://e7.pngegg.com/pngimages/51/223/png-clipart-computer-icons-facebook-inc-social-media-symbol-logo-for-rs-letters-logo-social-media.png" />
+            <img src="https://www.pngmart.com/files/23/Black-Facebook-Logo-PNG-Pic.png" />
           </li>
           <li className="footer-icon-item">
             <img src="https://freepngimg.com/download/icon/logo/62843-icons-media-twitter-computer-black-social-logo.png" />
