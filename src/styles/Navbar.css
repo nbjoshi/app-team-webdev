@@ -1,4 +1,4 @@
-.navbar {
+.navbar-container {
   background-color: var(--dark-green);
   display: flex;
   width: auto;
@@ -9,7 +9,7 @@
   padding: 0 20px;
 }
 
-.shipping-info {
+.navbar-shipping-info {
   font-size: 16px;
   font-weight: 600;
   line-height: 21.79px;
@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-.header {
+.navbar-header {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -25,10 +25,9 @@
   width: auto;
 }
 
-.logo-text {
+.navbar-logo-text {
   width: 195px;
   height: 37px;
-  font-family: "Poppins", sans-serif;
   font-size: 26px;
   line-height: 39px;
   letter-spacing: -0.6px;
@@ -36,56 +35,60 @@
   color: var(--dark-green);
 }
 
-.thumb {
+.navbar-logo-highlight {
   color: black;
 }
 
-.tabs {
+.navbar-tabs {
   display: flex;
   gap: 5rem;
   list-style: none;
-  font-family: "Open Sans", sans-serif;
   font-size: 17px;
 }
 
-ul li {
+.navbar-tab-item {
   padding: 10px;
   font-weight: 400;
 }
 
-.shop {
+.navbar-shop-section {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.search-form {
+.navbar-search-form {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-form input {
+.navbar-search-input {
   border: none;
   color: #979797;
   height: 26px;
   width: 57px;
-  font-family: "Open Sans", sans-serif;
   font-size: 17px;
 }
 
-.divider {
+.navbar-divider {
   border-right: 2px solid #979797;
   height: 40px;
   margin: 0 1rem;
 }
 
-.bag {
+.navbar-shopping-bag-icon {
   width: 18px;
   height: 21px;
+  cursor: pointer;
 }
 
-.glass {
+.navbar-search-icon {
   width: 22px;
   height: 22px;
+}
+
+.navbar-cart-count {
+  font-size: 16px;
+  font-weight: 600;
 }

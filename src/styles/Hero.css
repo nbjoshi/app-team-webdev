@@ -1,4 +1,4 @@
-.hero {
+.hero-container {
   width: auto;
   height: 184px;
   background-color: var(--light-green);
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.hero-text {
+.hero-content {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -15,7 +15,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-.hero-text h1 {
+.hero-header {
   margin: 0;
   font-size: 80px;
   font-family: "Poppins", sans-serif;
@@ -24,9 +24,15 @@
   letter-spacing: 2%;
 }
 
-.hero-text p {
+.hero-description {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 33px;
+}
+
+.hero-divider {
+  width: 2px;
+  height: 3rem;
+  background-color: gray;
 }

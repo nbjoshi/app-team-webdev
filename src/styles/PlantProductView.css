@@ -1,0 +1,97 @@
+.plant-product-container {
+  padding: 0 5rem;
+}
+
+.plant-product-back-link {
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.plant-product-body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: 4rem 4rem 4rem 0;
+  padding-right: 5rem;
+  gap: 4rem;
+}
+
+.plant-image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.plant-product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.plant-description {
+  color: #555;
+}
+
+.plant-size-label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.plant-size-options {
+  display: flex;
+  gap: 8px;
+}
+
+.plant-size-options button {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.plant-cart-section {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+  height: 4rem;
+}
+
+.add-to-cart-button {
+  background-color: var(--dark-green);
+  color: white;
+  flex: 1;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 15px;
+}
+
+.plant-quantity-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.quantity-label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  border: 3px solid gray;
+  border-radius: 15px;
+}
+
+.quantity-controls button {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}

@@ -2,11 +2,11 @@ import "../styles/Hero.css";
 
 export default function Hero({ header, description }) {
   return (
-    <div className="hero">
-      <div className="hero-text">
-        <h1>{header}</h1>
-        <span className="divider"></span>
-        <p>{description}</p>
+    <div className="hero-container">
+      <div className="hero-content">
+        <h1 className="hero-header">{header}</h1>
+        <span className="hero-divider"></span>
+        <p className="hero-description">{description}</p>
       </div>
     </div>
   );

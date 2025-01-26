@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
-import ShopBody from "./components/ShopBody.jsx";
+import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
         description={"Find the perfect plant for your space"}
       />
       <Outlet />
-      <ShopBody />
+      <Footer />
     </div>
   );
 }

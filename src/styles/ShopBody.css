@@ -1,22 +1,17 @@
-.main-body {
+.shop-body-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin: 86px;
 }
 
-.sort {
+.shop-sort-section {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
 }
 
-.right-side {
-  display: flex;
-  align-items: center;
-}
-
-.search {
+.shop-sort-bar {
   padding-left: 10px;
   display: flex;
   align-items: center;
@@ -25,32 +20,42 @@
   height: 37px;
 }
 
-.search p {
+.shop-sort-bar p {
   font-size: 13px;
   line-height: 26px;
   letter-spacing: -0.3px;
 }
 
-.chevron {
+.shop-sort-options {
+  display: flex;
+  align-items: center;
+}
+
+.shop-sort-chevron {
   width: 24px;
   height: 24px;
   opacity: 0.5;
 }
 
-.item-number {
+.shop-product-count {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.4px;
 }
 
-.filters {
+.shop-content {
+  display: flex;
+  gap: 8rem;
+}
+
+.shop-filters {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.plant-grid {
+.shop-plant-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 2rem;
 }

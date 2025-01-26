@@ -1,14 +1,24 @@
 import "../styles/PlantCard.css";
+import { useCart } from "../context/CartContext";
 
-export default function PlantCard({ img_url, name }) {
+export default function PlantCard({ id, img_url, name, price, onBuy }) {
+  const { addToCart } = useCart();
+
+  const handleBuy = () => {
+    addToCart({ id, img_url, name, price });
+    onBuy();
+  };
+
   return (
-    <div className="card">
-      <img src={img_url} alt={name} />
-      <div className="text">
-        <h2>{name}</h2>
-        <p>$ 350</p>
+    <div className="plant-card-container">
+      <img src={img_url} alt={name} className="plant-card-image" />
+      <div className="plant-card-text">
+        <h2 className="plant-card-name">{name}</h2>
+        <p className="plant-card-price">$ {price}</p>
       </div>
-      <button>Buy</button>
+      <button className="plant-card-buy-button" onClick={handleBuy}>
+        Buy
+      </button>
     </div>
   );
 }
