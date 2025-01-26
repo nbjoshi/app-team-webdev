@@ -2,7 +2,8 @@ import "../styles/Cart.css";
 import { useCart } from "../context/CartContext";
 
 export default function Cart({ onClose }) {
-  const { cartItems, removeFromCart, updateQuantity } = useCart();
+  const { cartItems, removeFromCart, updateQuantity, calculateTotal } =
+    useCart();
 
   return (
     <div className="cart-popup">
@@ -53,6 +54,15 @@ export default function Cart({ onClose }) {
             </div>
           </div>
         ))
+      )}
+      {cartItems.length > 0 && (
+        <div className="cart-total">
+          <div className="subtotal">
+            <p>Subtotal</p>
+            <p className="subtotal-price">${calculateTotal()}</p>
+          </div>
+          <button className="checkout">CHECKOUT</button>
+        </div>
       )}
     </div>
   );

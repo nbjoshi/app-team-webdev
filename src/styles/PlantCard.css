@@ -1,20 +1,30 @@
 .plant-card-container {
   box-shadow: 0px 8px 23px rgba(80, 107, 82, 0.13);
   border-radius: 16px;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 20rem;
-  height: 28rem;
+  width: 16rem;
+  height: 20rem;
+  padding: 2rem 2rem;
   font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+
+.plant-card-image-wrapper {
+  width: 100%;
+  height: 10rem;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 10px;
 }
 
 .plant-card-image {
   width: 100%;
-  height: 15rem;
-  padding: 8px;
-  border-radius: 20px;
+  height: auto;
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 .plant-card-text {
@@ -23,12 +33,12 @@
 }
 
 .plant-card-name {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
 .plant-card-price {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #555;
 }
 
@@ -39,12 +49,11 @@
   align-items: center;
   background-color: var(--dark-green);
   border-radius: 8px;
-  font-size: 20px;
-  line-height: 27.24px;
+  font-size: 16px;
+  line-height: 24px;
   color: white;
   width: 100%;
-  height: 64px;
+  height: 48px;
   padding: 8px;
-  gap: 10px;
   cursor: pointer;
 }

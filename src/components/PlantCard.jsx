@@ -11,7 +11,9 @@ export default function PlantCard({ id, img_url, name, price, onBuy }) {
 
   return (
     <div className="plant-card-container">
-      <img src={img_url} alt={name} className="plant-card-image" />
+      <div className="plant-card-image-wrapper">
+        <img src={img_url} alt={name} className="plant-card-image" />
+      </div>
       <div className="plant-card-text">
         <h2 className="plant-card-name">{name}</h2>
         <p className="plant-card-price">$ {price}</p>

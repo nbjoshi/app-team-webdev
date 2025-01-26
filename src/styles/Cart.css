@@ -66,7 +66,7 @@
 
 .cart-buttons-left {
   border: 2px solid black;
-  border-radius: 5px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   color: gray;
@@ -83,5 +83,32 @@
 .trash-can {
   width: 20px;
   height: 20px;
+  cursor: pointer;
+}
+
+.cart-total {
+  margin-top: 3rem;
+  border-top: 1px solid lightgray;
+}
+
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+  color: lightgray;
+}
+
+.subtotal-price {
+  color: black;
+  font-weight: bold;
+}
+
+.checkout {
+  width: 100%;
+  background-color: var(--dark-green);
+  border: none;
+  padding: 20px 0;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
 }
